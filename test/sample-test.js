@@ -57,7 +57,7 @@ const main = async () => {
           data = response.data;
          
         let tx=data.tx.data;
-        console.log("quote Successfull! :)");
+        console.log("Successfull! :)");
         console.log(data);
         let min_res = parseInt(data.toTokenAmount) * (100-slippage)/100;
         console.log("min_res: "+min_res);
@@ -79,14 +79,14 @@ const main = async () => {
             console.log("swap successfull! :)");
           }
           else{
-            console.log("not enough");
+            console.log("not sufficient");
           }
           console.log( "DAI after Swap :"+await SP.getDaiBalance());
           console.log( "1Inch after Swap :"+await SP.get1InchBalance());
       }
     }catch(err){
-      console.log("swapper encountered an error below")
-      console.log(err)
+      console.log("an error occored");
+      console.log(err);
     }
 }
 
